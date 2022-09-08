@@ -1,0 +1,419 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+  }
+  #confetti{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  
+  a.iprodev {
+    line-height: normal;
+    font-family: Varela Round, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 13px;
+    color: #A7AAAE;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    border: 1px solid #A7AAAE;
+    padding: 12px 20px 10px;
+    border-radius: 50px;
+    transition: all .1s ease-in-out;
+    text-transform: uppercase;
+  }
+  a.iprodev:hover {
+    background: #A7AAAE;
+    color: white;
+  }
+
+/* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
+audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
+audio:not([controls]){display:none;height:0}[hidden],template{display:none}
+a{background-color:transparent}a:active,a:hover{outline-width:0}
+abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:#ff0;color:#000}
+small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
+button,input,select,textarea,optgroup{font:inherit;margin:0}optgroup{font-weight:bold}
+button,input{overflow:visible}button,select{text-transform:none}
+button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}
+button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}
+button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
+[type=checkbox],[type=radio]{padding:0}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+/* End extract */
+html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
+h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
+.classserif{font-family:serif}.classsans-serif{font-family:sans-serif}.classcursive{font-family:cursive}.classmonospace{font-family:monospace}
+h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.classwide{letter-spacing:4px}
+hr{border:0;border-top:1px solid #eee;margin:20px 0}
+.classimage{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}
+.classtable,.classtable-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.classtable-all{border:1px solid #ccc}
+.classbordered tr,.classtable-all tr{border-bottom:1px solid #ddd}.classstriped tbody tr:nth-child(even){background-color:#f1f1f1}
+.classtable-all tr:nth-child(odd){background-color:#fff}.classtable-all tr:nth-child(even){background-color:#f1f1f1}
+.classhoverable tbody tr:hover,.classul.classhoverable li:hover{background-color:#ccc}.classcentered tr th,.classcentered tr td{text-align:center}
+.classtable td,.classtable th,.classtable-all td,.classtable-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+.classtable th:first-child,.classtable td:first-child,.classtable-all th:first-child,.classtable-all td:first-child{padding-left:16px}
+.classbtn,.classbutton{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.classbtn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+.classbtn,.classbutton{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+.classdisabled,.classbtn:disabled,.classbutton:disabled{cursor:not-allowed;opacity:0.3}.classdisabled *,:disabled *{pointer-events:none}
+.classbtn.classdisabled:hover,.classbtn:disabled:hover{box-shadow:none}
+.classbadge,.classtag{background-color:#000;color:#fff;display:inline-block;padding-left:8px;padding-right:8px;text-align:center}.classbadge{border-radius:50%}
+.classul{list-style-type:none;padding:0;margin:0}.classul li{padding:8px 16px;border-bottom:1px solid #ddd}.classul li:last-child{border-bottom:none}
+.classtooltip,.classdisplay-container{position:relative}.classtooltip .classtext{display:none}.classtooltip:hover .classtext{display:inline-block}
+.classripple:active{opacity:0.5}.classripple{transition:opacity 0s}
+.classinput{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
+.classselect{padding:9px 0;width:100%;border:none;border-bottom:1px solid #ccc}
+.classdropdown-click,.classdropdown-hover{position:relative;display:inline-block;cursor:pointer}
+.classdropdown-hover:hover .classdropdown-content{display:block}
+.classdropdown-hover:first-child,.classdropdown-click:hover{background-color:#ccc;color:#000}
+.classdropdown-hover:hover > .classbutton:first-child,.classdropdown-click:hover > .classbutton:first-child{background-color:#ccc;color:#000}
+.classdropdown-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0;z-index:1}
+.classcheck,.classradio{width:24px;height:24px;position:relative;top:6px}
+.classsidebar{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
+.classbar-block .classdropdown-hover,.classbar-block .classdropdown-click{width:100%}
+.classbar-block .classdropdown-hover .classdropdown-content,.classbar-block .classdropdown-click .classdropdown-content{min-width:100%}
+.classbar-block .classdropdown-hover .classbutton,.classbar-block .classdropdown-click .classbutton{width:100%;text-align:left;padding:8px 16px}
+.classmain,#main{transition:margin-left .4s}
+.classmodal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
+.classmodal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+.classbar{width:100%;overflow:hidden}.classcenter .classbar{display:inline-block;width:auto}
+.classbar .classbar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
+.classbar .classdropdown-hover,.classbar .classdropdown-click{position:static;float:left}
+.classbar .classbutton{white-space:normal}
+.classbar-block .classbar-item{width:100%;display:block;padding:8px 16px;text-align:left;border:none;white-space:normal;float:none;outline:0}
+.classbar-block.classcenter .classbar-item{text-align:center}.classblock{display:block;width:100%}
+.classresponsive{display:block;overflow-x:auto}
+.classcontainer:after,.classcontainer:before,.classpanel:after,.classpanel:before,.classrow:after,.classrow:before,.classrow-padding:after,.classrow-padding:before,
+.classcell-row:before,.classcell-row:after,.classclear:after,.classclear:before,.classbar:before,.classbar:after{content:"";display:table;clear:both}
+.classcol,.classhalf,.classthird,.classtwothird,.classthreequarter,.classquarter{float:left;width:100%}
+.classcol.s1{width:8.33333%}.classcol.s2{width:16.66666%}.classcol.s3{width:24.99999%}.classcol.s4{width:33.33333%}
+.classcol.s5{width:41.66666%}.classcol.s6{width:49.99999%}.classcol.s7{width:58.33333%}.classcol.s8{width:66.66666%}
+.classcol.s9{width:74.99999%}.classcol.s10{width:83.33333%}.classcol.s11{width:91.66666%}.classcol.s12{width:99.99999%}
+@media (min-width:601px){.classcol.m1{width:8.33333%}.classcol.m2{width:16.66666%}.classcol.m3,.classquarter{width:24.99999%}.classcol.m4,.classthird{width:33.33333%}
+.classcol.m5{width:41.66666%}.classcol.m6,.classhalf{width:49.99999%}.classcol.m7{width:58.33333%}.classcol.m8,.classtwothird{width:66.66666%}
+.classcol.m9,.classthreequarter{width:74.99999%}.classcol.m10{width:83.33333%}.classcol.m11{width:91.66666%}.classcol.m12{width:99.99999%}}
+@media (min-width:993px){.classcol.l1{width:8.33333%}.classcol.l2{width:16.66666%}.classcol.l3{width:24.99999%}.classcol.l4{width:33.33333%}
+.classcol.l5{width:41.66666%}.classcol.l6{width:49.99999%}.classcol.l7{width:58.33333%}.classcol.l8{width:66.66666%}
+.classcol.l9{width:74.99999%}.classcol.l10{width:83.33333%}.classcol.l11{width:91.66666%}.classcol.l12{width:99.99999%}}
+.classrest{overflow:hidden}.classstretch{margin-left:-16px;margin-right:-16px}
+.classcontent,.classauto{margin-left:auto;margin-right:auto}.classcontent{max-width:980px}.classauto{max-width:1140px}
+.classcell-row{display:table;width:100%}.classcell{display:table-cell}
+.classcell-top{vertical-align:top}.classcell-middle{vertical-align:middle}.classcell-bottom{vertical-align:bottom}
+.classhide{display:none!important}.classshow-block,.classshow{display:block!important}.classshow-inline-block{display:inline-block!important}
+@media (max-width:1205px){.classauto{max-width:95%}}
+@media (max-width:600px){.classmodal-content{margin:0 10px;width:auto!important}.classmodal{padding-top:30px}
+.classdropdown-hover.classmobile .classdropdown-content,.classdropdown-click.classmobile .classdropdown-content{position:relative}	
+.classhide-small{display:none!important}.classmobile{display:block;width:100%!important}.classbar-item.classmobile,.classdropdown-hover.classmobile,.classdropdown-click.classmobile{text-align:center}
+.classdropdown-hover.classmobile,.classdropdown-hover.classmobile .classbtn,.classdropdown-hover.classmobile .classbutton,.classdropdown-click.classmobile,.classdropdown-click.classmobile .classbtn,.classdropdown-click.classmobile .classbutton{width:100%}}
+@media (max-width:768px){.classmodal-content{width:500px}.classmodal{padding-top:50px}}
+@media (min-width:993px){.classmodal-content{width:900px}.classhide-large{display:none!important}.classsidebar.classcollapse{display:block!important}}
+@media (max-width:992px) and (min-width:601px){.classhide-medium{display:none!important}}
+@media (max-width:992px){.classsidebar.classcollapse{display:none}.classmain{margin-left:0!important;margin-right:0!important}.classauto{max-width:100%}}
+.classtop,.classbottom{position:fixed;width:100%;z-index:1}.classtop{top:0}.classbottom{bottom:0}
+.classoverlay{position:fixed;display:none;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.5);z-index:2}
+.classdisplay-topleft{position:absolute;left:0;top:0}.classdisplay-topright{position:absolute;right:0;top:0}
+.classdisplay-bottomleft{position:absolute;left:0;bottom:0}.classdisplay-bottomright{position:absolute;right:0;bottom:0}
+.classdisplay-middle{position:absolute;border-radius: 25px;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+.classdisplay-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.classdisplay-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.classdisplay-topmiddle{position:absolute;left:50%;top:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.classdisplay-bottommiddle{position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.classdisplay-container:hover .classdisplay-hover{display:block}.classdisplay-container:hover span.classdisplay-hover{display:inline-block}.classdisplay-hover{display:none}
+.classdisplay-position{position:absolute}
+.classcircle{border-radius:50%}
+.classround-small{border-radius:2px}.classround,.classround-medium{border-radius:4px}.classround-large{border-radius:8px}.classround-xlarge{border-radius:16px}.classround-xxlarge{border-radius:32px}
+.classrow-padding,.classrow-padding>.classhalf,.classrow-padding>.classthird,.classrow-padding>.classtwothird,.classrow-padding>.classthreequarter,.classrow-padding>.classquarter,.classrow-padding>.classcol{padding:0 8px}
+.classcontainer,.classpanel{padding:0.01em 16px}.classpanel{margin-top:16px;margin-bottom:16px}
+.classcode,.classcodespan{font-family:Consolas,"courier new";font-size:16px}
+.classcode{width:auto;background-color:#fff;padding:8px 12px;border-left:4px solid #4CAF50;word-wrap:break-word}
+.classcodespan{color:crimson;background-color:#f1f1f1;padding-left:4px;padding-right:4px;font-size:110%}
+.classcard,.classcard-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+.classcard-4,.classhover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+.classspin{animation:classspin 2s infinite linear}@keyframes classspin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}
+.classanimate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+.classanimate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
+.classanimate-top{position:relative;animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+.classanimate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+.classanimate-right{position:relative;animation:animateright 0.4s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+.classanimate-bottom{position:relative;animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+.classanimate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+.classanimate-input{transition:width 0.4s ease-in-out}.classanimate-input:focus{width:100%!important}
+.classopacity,.classhover-opacity:hover{opacity:0.60}.classopacity-off,.classhover-opacity-off:hover{opacity:1}
+.classopacity-max{opacity:0.25}.classopacity-min{opacity:0.75}
+.classgreyscale-max,.classgrayscale-max,.classhover-greyscale:hover,.classhover-grayscale:hover{filter:grayscale(100%)}
+.classgreyscale,.classgrayscale{filter:grayscale(75%)}.classgreyscale-min,.classgrayscale-min{filter:grayscale(50%)}
+.classsepia{filter:sepia(75%)}.classsepia-max,.classhover-sepia:hover{filter:sepia(100%)}.classsepia-min{filter:sepia(50%)}
+.classtiny{font-size:10px!important}.classsmall{font-size:12px!important}.classmedium{font-size:15px!important}.classlarge{font-size:18px!important}
+.classxlarge{font-size:24px!important}.classxxlarge{font-size:36px!important}.classxxxlarge{font-size:68px!important}.classjumbo{font: size 50vw!important}
+.classleft-align{text-align:left!important}.classright-align{text-align:right!important}.classjustify{text-align:justify!important}.classcenter{text-align:center!important}
+.classborder-0{border:0!important}.classborder{border:1px solid #ccc!important}
+.classborder-top{border-top:1px solid #ccc!important}.classborder-bottom{border-bottom:1px solid #ccc!important}
+.classborder-left{border-left:1px solid #ccc!important}.classborder-right{border-right:1px solid #ccc!important}
+.classtopbar{border-top:6px solid #ccc!important}.classbottombar{border-bottom:6px solid #ccc!important}
+.classleftbar{border-left:6px solid #ccc!important}.classrightbar{border-right:6px solid #ccc!important}
+.classsection,.classcode{margin-top:16px!important;margin-bottom:16px!important}
+.classmargin{margin:16px!important}.classmargin-top{margin-top:16px!important}.classmargin-bottom{margin-bottom:16px!important}
+.classmargin-left{margin-left:16px!important}.classmargin-right{margin-right:16px!important}
+.classpadding-small{padding:4px 8px!important}.classpadding{padding:8px 16px!important}.classpadding-large{padding:12px 24px!important}
+.classpadding-16{padding-top:16px!important;padding-bottom:16px!important}.classpadding-24{padding-top:24px!important;padding-bottom:24px!important}
+.classpadding-32{padding-top:32px!important;padding-bottom:32px!important}.classpadding-48{padding-top:48px!important;padding-bottom:48px!important}
+.classpadding-64{padding-top:64px!important;padding-bottom:64px!important}
+.classpadding-top-64{padding-top:64px!important}.classpadding-top-48{padding-top:48px!important}
+.classpadding-top-32{padding-top:32px!important}.classpadding-top-24{padding-top:24px!important}
+.classleft{float:left!important}.classright{float:right!important}
+.classbutton:hover{color:#000!important;background-color:#ccc!important}
+.classtransparent,.classhover-none:hover{background-color:transparent!important}
+.classhover-none:hover{box-shadow:none!important}
+/* Colors */
+.classamber,.classhover-amber:hover{color:#000!important;background-color:#ffc107!important}
+.classaqua,.classhover-aqua:hover{color:#000!important;background-color:#00ffff!important}
+.classblue,.classhover-blue:hover{color:#fff!important;background-color:#2196F3!important}
+.classlight-blue,.classhover-light-blue:hover{color:#000!important;background-color:#87CEEB!important}
+.classbrown,.classhover-brown:hover{color:#fff!important;background-color:#795548!important}
+.classcyan,.classhover-cyan:hover{color:#000!important;background-color:#00bcd4!important}
+.classblue-grey,.classhover-blue-grey:hover,.classblue-gray,.classhover-blue-gray:hover{color:#fff!important;background-color:#607d8b!important}
+.classgreen,.classhover-green:hover{color:#fff!important;background-color:#4CAF50!important}
+.classlight-green,.classhover-light-green:hover{color:#000!important;background-color:#8bc34a!important}
+.classindigo,.classhover-indigo:hover{color:#fff!important;background-color:#3f51b5!important}
+.classkhaki,.classhover-khaki:hover{color:#000!important;background-color:#f0e68c!important}
+.classlime,.classhover-lime:hover{color:#000!important;background-color:#cddc39!important}
+.classorange,.classhover-orange:hover{color:#000!important;background-color:#ff9800!important}
+.classdeep-orange,.classhover-deep-orange:hover{color:#fff!important;background-color:#ff5722!important}
+.classpink,.classhover-pink:hover{color:#fff!important;background-color:#e91e63!important}
+.classpurple,.classhover-purple:hover{color:#fff!important;background-color:#9c27b0!important}
+.classdeep-purple,.classhover-deep-purple:hover{color:#fff!important;background-color:#673ab7!important}
+.classred,.classhover-red:hover{color:#fff!important;background-color:#f44336!important}
+.classsand,.classhover-sand:hover{color:#000!important;background-color:#fdf5e6!important}
+.classteal,.classhover-teal:hover{color:#fff!important;background-color:#009688!important}
+.classyellow,.classhover-yellow:hover{color:#000!important;background-color:#ffeb3b!important}
+.classwhite,.classhover-white:hover{color:#000!important;background-color:#fff!important}
+.classblack,.classhover-black:hover{color:#fff!important;background-color:#000!important}
+.classgrey,.classhover-grey:hover,.classgray,.classhover-gray:hover{color:#000!important;background-color:#9e9e9e!important}
+.classlight-grey,.classhover-light-grey:hover,.classlight-gray,.classhover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+.classdark-grey,.classhover-dark-grey:hover,.classdark-gray,.classhover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
+.classpale-red,.classhover-pale-red:hover{color:#000!important;background-color:#ffdddd!important}
+.classpale-green,.classhover-pale-green:hover{color:#000!important;background-color:#ddffdd!important}
+.classpale-yellow,.classhover-pale-yellow:hover{color:#000!important;background-color:#ffffcc!important}
+.classpale-blue,.classhover-pale-blue:hover{color:#000!important;background-color:#ddffff!important}
+.classtext-amber,.classhover-text-amber:hover{color:#ffc107!important}
+.classtext-aqua,.classhover-text-aqua:hover{color:#00ffff!important}
+.classtext-blue,.classhover-text-blue:hover{color:#2196F3!important}
+.classtext-light-blue,.classhover-text-light-blue:hover{color:#87CEEB!important}
+.classtext-brown,.classhover-text-brown:hover{color:#795548!important}
+.classtext-cyan,.classhover-text-cyan:hover{color:#00bcd4!important}
+.classtext-blue-grey,.classhover-text-blue-grey:hover,.classtext-blue-gray,.classhover-text-blue-gray:hover{color:#607d8b!important}
+.classtext-green,.classhover-text-green:hover{color:#4CAF50!important}
+.classtext-light-green,.classhover-text-light-green:hover{color:#8bc34a!important}
+.classtext-indigo,.classhover-text-indigo:hover{color:#3f51b5!important}
+.classtext-khaki,.classhover-text-khaki:hover{color:#b4aa50!important}
+.classtext-lime,.classhover-text-lime:hover{color:#cddc39!important}
+.classtext-orange,.classhover-text-orange:hover{color:#ff9800!important}
+.classtext-deep-orange,.classhover-text-deep-orange:hover{color:#ff5722!important}
+.classtext-pink,.classhover-text-pink:hover{color:#e91e63!important}
+.classtext-purple,.classhover-text-purple:hover{color:#9c27b0!important}
+.classtext-deep-purple,.classhover-text-deep-purple:hover{color:#673ab7!important}
+.classtext-red,.classhover-text-red:hover{color:#f44336!important}
+.classtext-sand,.classhover-text-sand:hover{color:#fdf5e6!important}
+.classtext-teal,.classhover-text-teal:hover{color:#009688!important}
+.classtext-yellow,.classhover-text-yellow:hover{color:#d2be0e!important}
+.classtext-white,.classhover-text-white:hover{color:#fff!important}
+.classtext-black,.classhover-text-black:hover{color:#000!important}
+.classtext-grey,.classhover-text-grey:hover,.classtext-gray,.classhover-text-gray:hover{color:#757575!important}
+.classtext-light-grey,.classhover-text-light-grey:hover,.classtext-light-gray,.classhover-text-light-gray:hover{color:#f1f1f1!important}
+.classtext-dark-grey,.classhover-text-dark-grey:hover,.classtext-dark-gray,.classhover-text-dark-gray:hover{color:#3a3a3a!important}
+.classborder-amber,.classhover-border-amber:hover{border-color:#ffc107!important}
+.classborder-aqua,.classhover-border-aqua:hover{border-color:#00ffff!important}
+.classborder-blue,.classhover-border-blue:hover{border-color:#2196F3!important}
+.classborder-light-blue,.classhover-border-light-blue:hover{border-color:#87CEEB!important}
+.classborder-brown,.classhover-border-brown:hover{border-color:#795548!important}
+.classborder-cyan,.classhover-border-cyan:hover{border-color:#00bcd4!important}
+.classborder-blue-grey,.classhover-border-blue-grey:hover,.classborder-blue-gray,.classhover-border-blue-gray:hover{border-color:#607d8b!important}
+.classborder-green,.classhover-border-green:hover{border-color:#4CAF50!important}
+.classborder-light-green,.classhover-border-light-green:hover{border-color:#8bc34a!important}
+.classborder-indigo,.classhover-border-indigo:hover{border-color:#3f51b5!important}
+.classborder-khaki,.classhover-border-khaki:hover{border-color:#f0e68c!important}
+.classborder-lime,.classhover-border-lime:hover{border-color:#cddc39!important}
+.classborder-orange,.classhover-border-orange:hover{border-color:#ff9800!important}
+.classborder-deep-orange,.classhover-border-deep-orange:hover{border-color:#ff5722!important}
+.classborder-pink,.classhover-border-pink:hover{border-color:#e91e63!important}
+.classborder-purple,.classhover-border-purple:hover{border-color:#9c27b0!important}
+.classborder-deep-purple,.classhover-border-deep-purple:hover{border-color:#673ab7!important}
+.classborder-red,.classhover-border-red:hover{border-color:#f44336!important}
+.classborder-sand,.classhover-border-sand:hover{border-color:#fdf5e6!important}
+.classborder-teal,.classhover-border-teal:hover{border-color:#009688!important}
+.classborder-yellow,.classhover-border-yellow:hover{border-color:#ffeb3b!important}
+.classborder-white,.classhover-border-white:hover{border-color:#fff!important}
+.classborder-black,.classhover-border-black:hover{border-color:#000!important}
+.classborder-grey,.classhover-border-grey:hover,.classborder-gray,.classhover-border-gray:hover{border-color:#9e9e9e!important}
+.classborder-light-grey,.classhover-border-light-grey:hover,.classborder-light-gray,.classhover-border-light-gray:hover{border-color:#f1f1f1!important}
+.classborder-dark-grey,.classhover-border-dark-grey:hover,.classborder-dark-gray,.classhover-border-dark-gray:hover{border-color:#616161!important}
+.classborder-pale-red,.classhover-border-pale-red:hover{border-color:#ffe7e7!important}.classborder-pale-green,.classhover-border-pale-green:hover{border-color:#e7ffe7!important}
+.classborder-pale-yellow,.classhover-border-pale-yellow:hover{border-color:#ffffcc!important}.classborder-pale-blue,.classhover-border-pale-blue:hover{border-color:#e7ffff!important}
+
+{
+  box-sizing: border-box;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+body {
+  padding: 0;
+  margin:0;
+  background-color: #110019;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+  background-image: none;
+  }
+  
+  #starshine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }    
+      
+  .shine {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAJYCAMAAACJuGjuAAADAFBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+/LkhhAAAA/3RSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyAhIiMkJSYnKCkqKywtLi8wMTIzNDU2Nzg5Ojs8PT4/QEFCQ0RFRkdISUpLTE1O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);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: 100% 100%;
+    overflow: hidden;
+    z-index: 2;
+    color: tansparent;
+    -moz-opacity: 0.0;
+    opacity: 0.0;
+    animation: glitter 6s linear 0s infinite normal;
+    -webkit-animation: glitter 6s linear 0s infinite normal;
+    -moz-animation: glitter 8s linear 0s infinite normal;
+    -ms-animation: glitter 8s linear 0s infinite normal;
+    -o-animation: glitter 8s linear 0s infinite normal;
+  }
+  
+  .shine.small {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .shine.medium {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .shine.large {
+    width: 50px;
+    height: 50px;
+  }
+  
+  /*CSS3 keyframes for glittering effect*/
+  @-webkit-keyframes glitter {
+    0% {
+      -webkit-transform: scale(0.3) rotate(0deg);
+      opacity: 0;
+    }
+    25% {
+      -webkit-transform: scale(1) rotate(360deg);
+      opacity: 1;
+    }
+    50% {
+      -webkit-transform: scale(0.3) rotate(720deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(0.3) rotate(0deg);
+      opacity: 0;
+    }
+  }
